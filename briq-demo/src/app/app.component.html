@@ -1,0 +1,25 @@
+<div class="demo-container">
+    <header-component></header-component>
+
+    <div class="body-container">
+
+        <div *ngIf="!tableData" class="upload-source-container">
+            <span>Upload Data Source:</span>
+            <input hidden type="file" #uploader (change)="uploadFile($event)" />
+            <button mat-flat-button (click)="uploader.click()">
+                Upload Data
+            </button>
+        </div>
+
+        <ng-container *ngIf="!tableData">
+            <div class="image-container">
+                <img src="../assets/images/upload.png" />
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="tableData">
+            <data-table [headers]="headers" [tableData]="tableData"></data-table>
+        </ng-container>
+    </div>
+
+</div>

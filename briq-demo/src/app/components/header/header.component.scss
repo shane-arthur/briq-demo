@@ -1,0 +1,15 @@
+@import '../../../styles.scss';
+
+div{
+    @include linear-gradient(darkgrey, black);
+    height: 150px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    span{
+        margin: 0 auto;
+    }
+
+}
