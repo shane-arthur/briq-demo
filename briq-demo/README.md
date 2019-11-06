@@ -41,9 +41,9 @@ This count will give us a percentage once we divide against the whole data set w
 
 From here, the data is already sorted by sq footage, and relecency is decreased in relation to the size of the whole set as we iterate down the set.
 
-##### Improvments
+##### Improvements
 
-Obviously, the nicest improvment would be to not have to upload the data set, and have the excel sheet fetched from an xhr call. (Time).
+Obviously, the nicest improvment would be to not have to upload the data set, and have the excel sheet fetched from an xhr call. This would take some extra time reading in the file buffer (Time).
 
 Table Layout - Deal with margins better (hassle in material since we would be overriding the glasses). (Time)
 
