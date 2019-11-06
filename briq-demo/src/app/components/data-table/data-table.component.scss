@@ -1,0 +1,7 @@
+@import '../../../styles.scss';
+
+mat-form-field{
+    background-color: black;
+    width: 100%;
+    @include linear-gradient(black, darkgrey);
+}

@@ -4,7 +4,8 @@ import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 
 @Component({
   selector: 'data-table',
-  templateUrl: './data-table.component.html'
+  templateUrl: './data-table.component.html',
+  styleUrls: ['./data-table.component.scss']
 })
 export class DataTableComponent implements OnChanges, AfterViewInit {
   displayedColumns;
@@ -14,6 +15,12 @@ export class DataTableComponent implements OnChanges, AfterViewInit {
   @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator;
   @ViewChild(MatSort, { static: false }) sort: MatSort;
   constructor() { }
+
+  applyFilter(filterValue: string) {
+    filterValue = filterValue.trim(); // Remove whitespace
+    filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
+    this.dataSource.filter = filterValue;
+  }
 
   ngOnChanges() {
     if (this.tableData && this.headers) {
